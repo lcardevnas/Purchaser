@@ -13,6 +13,8 @@
 		AA285BE521AD5B02005A40FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA285BE421AD5B02005A40FD /* Assets.xcassets */; };
 		AA285BE821AD5B02005A40FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA285BE621AD5B02005A40FD /* LaunchScreen.storyboard */; };
 		AA285BF321AD5B02005A40FD /* PurchaserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA285BF221AD5B02005A40FD /* PurchaserTests.swift */; };
+		AA285C0121AD5C09005A40FD /* Purchaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA285C0021AD5C09005A40FD /* Purchaser.swift */; };
+		AA285C0321AD5CBB005A40FD /* PCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA285C0221AD5CBB005A40FD /* PCError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		AA285BEE21AD5B02005A40FD /* PurchaserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurchaserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA285BF221AD5B02005A40FD /* PurchaserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaserTests.swift; sourceTree = "<group>"; };
 		AA285BF421AD5B02005A40FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA285C0021AD5C09005A40FD /* Purchaser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchaser.swift; sourceTree = "<group>"; };
+		AA285C0221AD5CBB005A40FD /* PCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +83,9 @@
 			children = (
 				AA285BDD21AD5AFE005A40FD /* AppDelegate.swift */,
 				AA285BDF21AD5AFE005A40FD /* ViewController.swift */,
-				AA285BE121AD5AFE005A40FD /* Main.storyboard */,
-				AA285BE421AD5B02005A40FD /* Assets.xcassets */,
-				AA285BE621AD5B02005A40FD /* LaunchScreen.storyboard */,
-				AA285BE921AD5B02005A40FD /* Info.plist */,
+				AA285BFE21AD5B74005A40FD /* Source */,
+				AA285BFD21AD5B5B005A40FD /* Resources */,
+				AA285BFF21AD5BA3005A40FD /* Supporting files */,
 			);
 			path = Purchaser;
 			sourceTree = "<group>";
@@ -94,6 +97,34 @@
 				AA285BF421AD5B02005A40FD /* Info.plist */,
 			);
 			path = PurchaserTests;
+			sourceTree = "<group>";
+		};
+		AA285BFD21AD5B5B005A40FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA285BE121AD5AFE005A40FD /* Main.storyboard */,
+				AA285BE421AD5B02005A40FD /* Assets.xcassets */,
+				AA285BE621AD5B02005A40FD /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA285BFE21AD5B74005A40FD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AA285C0221AD5CBB005A40FD /* PCError.swift */,
+				AA285C0021AD5C09005A40FD /* Purchaser.swift */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		AA285BFF21AD5BA3005A40FD /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				AA285BE921AD5B02005A40FD /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA285BE021AD5AFE005A40FD /* ViewController.swift in Sources */,
+				AA285C0321AD5CBB005A40FD /* PCError.swift in Sources */,
+				AA285C0121AD5C09005A40FD /* Purchaser.swift in Sources */,
 				AA285BDE21AD5AFE005A40FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -346,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -362,12 +395,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ3VSUA92U;
-				INFOPLIST_FILE = Purchaser/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Purchaser/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thxou.Purchaser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thxou.purchaser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,12 +413,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ3VSUA92U;
-				INFOPLIST_FILE = Purchaser/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Purchaser/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thxou.Purchaser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thxou.purchaser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
