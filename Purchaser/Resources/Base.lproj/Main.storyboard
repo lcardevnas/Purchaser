@@ -62,7 +62,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Purchaser" id="WU3-TX-wPg"/>
+                    <navigationItem key="navigationItem" title="Purchaser" id="WU3-TX-wPg">
+                        <barButtonItem key="rightBarButtonItem" title="Restore" id="yLi-pn-Gvs">
+                            <connections>
+                                <action selector="restorePurchases:" destination="BYZ-38-t0r" id="AH1-U8-mdG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="fUE-2w-HjP" id="G9B-7s-hQS"/>
                     </connections>

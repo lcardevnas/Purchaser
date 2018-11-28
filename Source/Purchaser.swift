@@ -154,7 +154,12 @@ public extension Purchaser {
         requestProducts(with: Purchaser.manager.productIdentifiers, completion: completion)
     }
     
+    /// Start App Store purchase process of the specified product.
     ///
+    /// - parameter product:        The `SKProduct` object related to the product the user needs to buy.
+    /// - parameter account:        An unique `String` identifying the user making the transaction (username, email, etc.). `Purchaser`
+    ///                                 finally sends the SHA256 hash of the `account` parameter.
+    /// - parameter completion:     A completion closure to be called during the process. It can be called many times.
     public class func buy(_ product: SKProduct, account: String? = nil, completion: @escaping ProductsTransactionCompletionHandler) {
         Purchaser.manager.productsTransactionCompletionHandler = completion
         
@@ -165,18 +170,24 @@ public extension Purchaser {
         SKPaymentQueue.default().add(payment)
     }
     
-    public class func isProductPurchased(with identifier: ProductIdentifier) -> Bool {
-        return UserDefaults.standard.bool(forKey: identifier)
-    }
-    
-    public class func canMakePayments() -> Bool {
-        return SKPaymentQueue.canMakePayments()
-    }
-    
+    /// Restores all the previously finished purchases. It restores only products marked as restorables in the App Store Connect's
+    /// product configuration.
+    ///
+    /// - parameter completion:     The completion closure called after the restore has been completed.
     public class func restorePurchases(_ completion: @escaping ProductsTransactionCompletionHandler) {
         Purchaser.manager.productsTransactionCompletionHandler = completion
         
         SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+    /// A boolean indicating if a product has been purchased.
+    public class func isProductPurchased(with identifier: ProductIdentifier) -> Bool {
+        return UserDefaults.standard.bool(forKey: identifier)
+    }
+    
+    /// A boolean indicating if the current device user is allowed to make payments.
+    public class func canMakePayments() -> Bool {
+        return SKPaymentQueue.canMakePayments()
     }
 }
 

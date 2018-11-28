@@ -46,13 +46,26 @@ class ViewController: UIViewController {
                 print("error buying product: \(error)")
             } else {
                 if state == .purchasing || state == .deferred { return }
-                print("product purchased or restored!")
+                print("product purchased!")
             }
         }
     }
     
     fileprivate func reload() {
         tableView?.reloadData()
+    }
+    
+    
+    // MARK: - Actions
+    @IBAction func restorePurchases(_ sender: UIBarButtonItem) {
+        Purchaser.restorePurchases { (state, _, _, error) in
+            if let error = error {
+                print("error restoring product: \(error)")
+            } else {
+                if state == .purchasing || state == .deferred { return }
+                print("product restored!")
+            }
+        }
     }
 }
 
