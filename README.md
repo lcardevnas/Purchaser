@@ -1,9 +1,9 @@
 Overview
 ==============
-<!--
+
 [![Pod Version](http://img.shields.io/cocoapods/v/Purchaser.svg?style=flat)](https://github.com/ThXou/Purchaser)
 [![Pod Platform](http://img.shields.io/cocoapods/p/Purchaser.svg?style=flat)](https://github.com/ThXou/Purchaser)
-[![Pod License](http://img.shields.io/cocoapods/l/Purchaser.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)-->
+[![Pod License](http://img.shields.io/cocoapods/l/Purchaser.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 Purchaser is a set of classes written in Swift to help iOS developers to simplify the process of implementing In-App purchases in their applications.
 
@@ -22,19 +22,17 @@ Requirements
 * Xcode 10.0+
 * Swift 4.2+
 
-<!--
 Install
 ==============
--->
-<!--
+
 ### Cocoapods
--->
-<!--Add this line to your podfile:-->
-<!--
+
+Add this line to your podfile:
+
 ```ruby
 pod 'Purchaser'
 ```
--->
+
 Setup
 ==============
 
